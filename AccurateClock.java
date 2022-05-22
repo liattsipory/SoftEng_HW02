@@ -1,19 +1,26 @@
 public class AccurateClock extends Clock {
     private int seconds;
+    static final int MAX_SECONDS = 59;
+    static final int MIN_SECONDS = 0;
 
     public AccurateClock(int hour, int minute, int seconds) {
         super(hour, minute);
-        this.seconds = seconds;
+        if((seconds > MAX_SECONDS) || (seconds < MIN_SECONDS)) this.seconds = 0;
+        else this.seconds = seconds;
     }
 
     @Override
-    public int hashCode() {
-        return 60 * hour + minute;
+    private String toString() {
+        String secondsString;
+        if (this.seconds < 10) secondsString = String.join("", "0", String.valueOf(this.seconds));
+        else secondsString = String.valueOf(this.seconds);
+        String currentTime = String.join(":", super.toString(), secondsString);
+        return currentTime;
     }
 
     @Override
-    public boolean equals(Object other) {
-        Clock otherClock = (Clock) other;
-        return this.hour == otherClock.hour && this.minute == otherClock.minute;
+    private int hashCode() {
+
     }
+
 }
