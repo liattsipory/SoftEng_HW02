@@ -23,7 +23,7 @@ public class Clock {
     @Override
     public boolean equals(Object other) {
         Clock otherClock = (Clock) other;
-        return this.hour == otherClock.hour && this.minute == otherClock.minute;
+        return (this.hour == otherClock.hour && this.minute == otherClock.minute);
     }
 
     public int getHour() { return hour; }
