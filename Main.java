@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         testPartA();
-        //testPartB();
+        testPartB();
     }
 
     private static void testPartA() {
@@ -39,12 +39,12 @@ public class Main {
         System.out.println("new: " + new AccurateClock(5, 6, 3));
     }
 
-//    private static void testPartB() {
-//        System.out.println("--------------- Tests for part B ---------------");
-//
-//        Expression intExp1 = new IntegerLiteral(5);
-//        printExpression(intExp1, "intExp1");
-//
+    private static void testPartB() {
+        System.out.println("--------------- Tests for part B ---------------");
+
+        Expression intExp1 = new IntegerLiteral(5);
+        printExpression(intExp1, "intExp1");
+
 //        Expression doubleExp1 = new DoubleLiteral(7.5);
 //        printExpression(doubleExp1, "doubleExp1");
 //
@@ -168,20 +168,20 @@ public class Main {
 //
 //        Addition exp4 = new Addition(exp3, parsed6);
 //        printExpression(exp4, "exp4");
-//    }
-//
-//    private static void printExpression(Expression exp, String name, boolean withClass) {
-//        System.out.println(name + ": " + exp);
-//        System.out.println(name + " with toString: " + exp.toString());
-//        System.out.println(name + " value: " + exp.evaluate());
-//
-//        if (withClass) {
-//            System.out.println(name + " class: " + exp.getClass());
-//        }
-//        System.out.println();
-//    }
-//
-//    private static void printExpression(Expression exp, String name) {
-//        printExpression(exp, name, false);
-//    }
+    }
+
+    private static void printExpression(Expression exp, String name, boolean withClass) {
+        System.out.println(name + ": " + exp);
+        System.out.println(name + " with toString: " + exp.toString());
+        System.out.println(name + " value: " + exp.evaluate());
+
+        if (withClass) {
+            System.out.println(name + " class: " + exp.getClass());
+        }
+        System.out.println();
+    }
+
+    private static void printExpression(Expression exp, String name) {
+        printExpression(exp, name, false);
+    }
 }
