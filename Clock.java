@@ -22,11 +22,14 @@ public class Clock {
 
     @Override
     public boolean equals(Object other) {
-        Clock otherClock = (Clock) other;
-        if (otherClock == null)
+        if (other == null)
             return false;
-        return (this.hour == otherClock.hour && this.minute == otherClock.minute);
+        if (other instanceof Clock) {
+            return (this.hashCode() == other.hashCode());
+        }
+        else return false;
     }
+
 
     public int getHour() { return hour; }
 
