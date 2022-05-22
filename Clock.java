@@ -17,12 +17,14 @@ public class Clock {
 
     @Override
     public int hashCode() {
-        return 60 * this.hour + this.minute;
+        return 11*1000000 + 10000 * this.hour + 100 * this.minute;
     }
 
     @Override
     public boolean equals(Object other) {
         Clock otherClock = (Clock) other;
+        if (otherClock == null)
+            return false;
         return (this.hour == otherClock.hour && this.minute == otherClock.minute);
     }
 
