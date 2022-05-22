@@ -1,0 +1,138 @@
+--------------- Tests for part A ---------------
+c1 with o1: true
+o1 with c1: true
+c1 with ac1: false
+ac1 with c1: false
+c1 with c2: false
+c2 with c1: false
+c1 with o2: false
+o2 with c1: false
+ac1 with c2: true
+c2 with ac1: true
+ac1 with o2: true
+o2 with ac1: true
+c2 with o2: true
+o2 with c2: true
+c1 with null: false
+o1 with null: false
+ac1 with null: false
+c1: 10:30
+o1: 10:30
+ac1: 10:30:20
+c2: 10:30:20
+o2: 10:30:20
+new: 05:06:03
+--------------- Tests for part B ---------------
+intExp1: (5)
+intExp1 with toString: (5)
+intExp1 value: 5.0
+
+doubleExp1: (7.5)
+doubleExp1 with toString: (7.5)
+doubleExp1 value: 7.5
+
+exp1: (((5) + (7.5)) * (-5))
+exp1 with toString: (((5) + (7.5)) * (-5))
+exp1 value: -62.5
+
+exp2: (((5) + (7.5)) * (-(-(-5))))
+exp2 with toString: (((5) + (7.5)) * (-(-(-5))))
+exp2 value: -62.5
+
+exp3: ((5) - (-5))
+exp3 with toString: ((5) - (-5))
+exp3 value: 10.0
+
+divisionExp: (((((5) * (-5)) - (7.5)) + (((5) + (7.5)) * (-(-(-5))))) / (((5) + (7.5)) * (-5)))
+divisionExp with toString: (((((5) * (-5)) - (7.5)) + (((5) + (7.5)) * (-(-(-5))))) / (((5) + (7.5)) * (-5)))
+divisionExp value: 1.52
+
+multiAdd1: ((21.03) + (3))
+multiAdd1 with toString: ((21.03) + (3))
+multiAdd1 value: 24.03
+
+multiAdd2: ((21.03) + (3) + (5) + (3.1415))
+multiAdd2 with toString: ((21.03) + (3) + (5) + (3.1415))
+multiAdd2 value: 32.1715
+
+multiMultiplication1: ((5) * (7.0))
+multiMultiplication1 with toString: ((5) * (7.0))
+multiMultiplication1 value: 35.0
+
+multiMultiplication2: ((5) * (7.0) * (-((4.0) + (3))))
+multiMultiplication2 with toString: ((5) * (7.0) * (-((4.0) + (3))))
+multiMultiplication2 value: -245.0
+
+roundExp1: (5.123456)
+roundExp1 with toString: (5.123456)
+roundExp1 value: 5.12
+
+roundExp2: (5.123456)
+roundExp2 with toString: (5.123456)
+roundExp2 value: 5.0
+
+roundExp3: (5.1234567)
+roundExp3 with toString: (5.1234567)
+roundExp3 value: 5.12346
+
+roundExp4: ((21.03) + (3) + (5) + (3.1415))
+roundExp4 with toString: ((21.03) + (3) + (5) + (3.1415))
+roundExp4 value: 32.17
+
+roundExp5: ((21.03) + (3) + (5) + (3.1415))
+roundExp5 with toString: ((21.03) + (3) + (5) + (3.1415))
+roundExp5 value: 32.2
+
+massiveExp: ((((((5) * (-5)) - (7.5)) + (((5) + (7.5)) * (-(-(-5))))) / (((5) + (7.5)) * (-5))) * (-((((((5) * (-5)) - (7.5)) + (((5) + (7.5)) * (-(-(-5))))) / (((5) + (7.5)) * (-5))) * ((((5) - (-5)) + (7.5)) / (-((2.17) / ((((((5) * (-5)) - (7.5)) + (((5) + (7.5)) * (-(-(-5))))) / (((5) + (7.5)) * (-5))) - ((5) - (-5)))))))))
+massiveExp with toString: ((((((5) * (-5)) - (7.5)) + (((5) + (7.5)) * (-(-(-5))))) / (((5) + (7.5)) * (-5))) * (-((((((5) * (-5)) - (7.5)) + (((5) + (7.5)) * (-(-(-5))))) / (((5) + (7.5)) * (-5))) * ((((5) - (-5)) + (7.5)) / (-((2.17) / ((((((5) * (-5)) - (7.5)) + (((5) + (7.5)) * (-(-(-5))))) / (((5) + (7.5)) * (-5))) - ((5) - (-5)))))))))
+massiveExp value: -158.00154838709682
+
+parsed1: (1.5)
+parsed1 with toString: (1.5)
+parsed1 value: 1.5
+parsed1 class: class DoubleLiteral
+
+parsed2: (1)
+parsed2 with toString: (1)
+parsed2 value: 1.0
+parsed2 class: class IntegerLiteral
+
+parsed3: (1.0)
+parsed3 with toString: (1.0)
+parsed3 value: 1.0
+parsed3 class: class DoubleLiteral
+
+parsed4: ((1) + (2))
+parsed4 with toString: ((1) + (2))
+parsed4 value: 3.0
+parsed4 class: class Addition
+
+parsed5: ((1) + (2))
+parsed5 with toString: ((1) + (2))
+parsed5 value: 3.0
+parsed5 class: class Addition
+
+parsed6: (((1.0) + (2)) * ((3.0) + (4)))
+parsed6 with toString: (((1.0) + (2)) * ((3.0) + (4)))
+parsed6 value: 21.0
+parsed6 class: class Multiplication
+
+parsed7: (((1) + (2.0)) * ((3) + (4.0)))
+parsed7 with toString: (((1) + (2.0)) * ((3) + (4.0)))
+parsed7 value: 21.0
+parsed7 class: class Multiplication
+
+parsed8: (-(((1) + (-(2.0))) * ((3) + (4.0))))
+parsed8 with toString: (-(((1) + (-(2.0))) * ((3) + (4.0))))
+parsed8 value: 7.0
+parsed8 class: class UnaryMinus
+
+parsed9: (-(-(-(((1.0) + (2)) * ((3.0) + (-(4)))))))
+parsed9 with toString: (-(-(-(((1.0) + (2)) * ((3.0) + (-(4)))))))
+parsed9 value: 3.0
+parsed9 class: class UnaryMinus
+
+exp4: (((5) - (-5)) + (((1.0) + (2)) * ((3.0) + (4))))
+exp4 with toString: (((5) - (-5)) + (((1.0) + (2)) * ((3.0) + (4))))
+exp4 value: 31.0
+
