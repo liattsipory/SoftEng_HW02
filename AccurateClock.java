@@ -6,7 +6,14 @@ public class AccurateClock extends Clock {
         this.seconds = seconds;
     }
 
-    /*
-    Additional methods...
-     */
+    @Override
+    public int hashCode() {
+        return 60 * hour + minute;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        Clock otherClock = (Clock) other;
+        return this.hour == otherClock.hour && this.minute == otherClock.minute;
+    }
 }
