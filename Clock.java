@@ -43,8 +43,8 @@ public class Clock {
         if (this.hour<10)
             HH = "0"+HH;
         if (this.minute<10)
-            HH = "0"+MM;
-        String currentTime = String.join(":","HH","MM");
+            MM = "0"+MM;
+        String currentTime = String.join(":",HH,MM);
         return currentTime;
     }
 
