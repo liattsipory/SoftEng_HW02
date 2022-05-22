@@ -25,9 +25,9 @@ public class AccurateClock extends Clock {
 
     @Override
     public boolean equals(Object other) {
+        if (other == null) return false;
         if (other instanceof Clock) {
-            if (other.hashCode() == this.hashCode()) return true;
-            else return false;
+            return (other.hashCode() == this.hashCode());
         }
         else return false;
     }
