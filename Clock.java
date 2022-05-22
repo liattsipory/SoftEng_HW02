@@ -1,6 +1,6 @@
 public class Clock {
-    private int hour;
-    private int minute;
+    public int hour;
+    public int minute;
     static final int MAX_HOUR = 23;
     static final int MAX_MINUTE = 59;
     static final int MIN_HOUR = 0;
@@ -17,7 +17,7 @@ public class Clock {
 
     @Override
     public int hashCode() {
-        return 60 * hour + minute;
+        return 60 * this.hour + this.minute;
     }
 
     @Override
