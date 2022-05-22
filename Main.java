@@ -45,11 +45,11 @@ public class Main {
         Expression intExp1 = new IntegerLiteral(5);
         printExpression(intExp1, "intExp1");
 
-//        Expression doubleExp1 = new DoubleLiteral(7.5);
-//        printExpression(doubleExp1, "doubleExp1");
-//
-//        Expression intExp2 = new IntegerLiteral(-5);
-//
+        Expression doubleExp1 = new DoubleLiteral(7.5);
+        printExpression(doubleExp1, "doubleExp1");
+
+        Expression intExp2 = new IntegerLiteral(-5);
+
 //        Expression exp1 = new Multiplication(
 //                                  new Addition(
 //                                          intExp1,
@@ -104,14 +104,14 @@ public class Main {
 //                                                                  new IntegerLiteral(3))));
 //        printExpression(multiMultiplication2, "multiMultiplication2");
 //
-//        Expression roundExp1 = new RoundedExpression(new DoubleLiteral(5.123456), 2);
-//        printExpression(roundExp1, "roundExp1");
-//
-//        Expression roundExp2 = new RoundedExpression(new DoubleLiteral(5.123456), 0);
-//        printExpression(roundExp2, "roundExp2");
-//
-//        Expression roundExp3 = new RoundedExpression(new DoubleLiteral(5.1234567), 5);
-//        printExpression(roundExp3, "roundExp3");
+        Expression roundExp1 = new RoundedExpression(new DoubleLiteral(5.123456), 2);
+        printExpression(roundExp1, "roundExp1");
+
+        Expression roundExp2 = new RoundedExpression(new DoubleLiteral(5.123456), 0);
+        printExpression(roundExp2, "roundExp2");
+
+        Expression roundExp3 = new RoundedExpression(new DoubleLiteral(5.1234567), 5);
+        printExpression(roundExp3, "roundExp3");
 //
 //        Expression roundExp4 = new RoundedExpression(multiAdd2, 2);
 //        printExpression(roundExp4, "roundExp4");

@@ -1,18 +1,11 @@
-public class IntegerLiteral extends Expression{
-    private int value;
-    private String printedValue;
+public class IntegerLiteral extends DoubleLiteral{
 
     public IntegerLiteral(int number) {
-        this.value = number;
-        printedValue = "(" + number + ")";
-    }
-
-    public double evaluate() {
-       return this.value;
+        super(number);
     }
 
     @Override
     public String toString() {
-        return this.printedValue;
+        return "(" + (int)this.getValue() + ")";
     }
 }
