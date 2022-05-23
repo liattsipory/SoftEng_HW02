@@ -3,17 +3,21 @@ public class MultiMultiplication extends Expression{
     private String printedValue;
 
     public MultiMultiplication(Expression... values) {
-        int result = 1;
+        double result = 1;
+        this.printedValue = "(";
         for (Expression value : values) {
             result *= value.evaluate();
         }
         this.value = result;
-        for (Expression value : values) {
-            String string_val = value.toString();
-            this.printedValue = String.join(")*(", string_val);
+        int len = values.length;
+        for (int i = 0; i < len-1; i++) {
+            this.printedValue += values[i].toString() + " * ";
         }
+        this.printedValue += values[len-1].toString() + ")";
 
     }
+
+
     @Override
     public double evaluate () {
         return this.value;

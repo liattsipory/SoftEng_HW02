@@ -1,4 +1,4 @@
-abstract public class  Expression {
+abstract public class Expression {
     public abstract double evaluate();
     @Override
     public abstract String toString();

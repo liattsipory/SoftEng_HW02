@@ -50,60 +50,60 @@ public class Main {
 
         Expression intExp2 = new IntegerLiteral(-5);
 
-//        Expression exp1 = new Multiplication(
-//                                  new Addition(
-//                                          intExp1,
-//                                          doubleExp1),
-//                                  intExp2);
-//        printExpression(exp1, "exp1");
-//
-//        Expression exp2 = new Multiplication(
-//                                  new Addition(
-//                                          intExp1,
-//                                          doubleExp1),
-//                                  new UnaryMinus(
-//                                          new UnaryMinus(
-//                                                  intExp2)));
-//        printExpression(exp2, "exp2");
-//
-//        Expression exp3 = new Subtraction(intExp1, intExp2);
-//        printExpression(exp3, "exp3");
-//
-//        Expression divisionExp = new Division(
-//                                         new Addition(
-//                                                 new Subtraction(
-//                                                         new Multiplication(
-//                                                                 intExp1,
-//                                                                 intExp2),
-//                                                         doubleExp1),
-//                                                 exp2),
-//                                         exp1);
-//        printExpression(divisionExp, "divisionExp");
-//
-//        Expression multiAdd1 = new MultiAddition(
-//                                       new DoubleLiteral(21.03),
-//                                       new IntegerLiteral(3));
-//        printExpression(multiAdd1, "multiAdd1");
-//
-//        Expression multiAdd2 = new MultiAddition(
-//                                       new DoubleLiteral(21.03),
-//                                       new IntegerLiteral(3),
-//                                       new IntegerLiteral(5),
-//                                       new DoubleLiteral(3.1415));
-//        printExpression(multiAdd2, "multiAdd2");
-//
-//        Expression multiMultiplication1 = new MultiMultiplication(new IntegerLiteral(5), new DoubleLiteral(7));
-//        printExpression(multiMultiplication1, "multiMultiplication1");
-//
-//        Expression multiMultiplication2 = new MultiMultiplication(
-//                                                  new IntegerLiteral(5),
-//                                                  new DoubleLiteral(7),
-//                                                  new UnaryMinus(
-//                                                          new Addition(
-//                                                                  new DoubleLiteral(4),
-//                                                                  new IntegerLiteral(3))));
-//        printExpression(multiMultiplication2, "multiMultiplication2");
-//
+        Expression exp1 = new Multiplication(
+                                  new Addition(
+                                          intExp1,
+                                          doubleExp1),
+                                  intExp2);
+        printExpression(exp1, "exp1");
+
+        Expression exp2 = new Multiplication(
+                                  new Addition(
+                                          intExp1,
+                                          doubleExp1),
+                                  new UnaryMinus(
+                                          new UnaryMinus(
+                                                  intExp2)));
+        printExpression(exp2, "exp2");
+
+        Expression exp3 = new Subtraction(intExp1, intExp2);
+        printExpression(exp3, "exp3");
+
+        Expression divisionExp = new Division(
+                                         new Addition(
+                                                 new Subtraction(
+                                                         new Multiplication(
+                                                                 intExp1,
+                                                                 intExp2),
+                                                         doubleExp1),
+                                                 exp2),
+                                         exp1);
+        printExpression(divisionExp, "divisionExp");
+
+        Expression multiAdd1 = new MultiAddition(
+                                       new DoubleLiteral(21.03),
+                                       new IntegerLiteral(3));
+        printExpression(multiAdd1, "multiAdd1");
+
+        Expression multiAdd2 = new MultiAddition(
+                                       new DoubleLiteral(21.03),
+                                       new IntegerLiteral(3),
+                                       new IntegerLiteral(5),
+                                       new DoubleLiteral(3.1415));
+        printExpression(multiAdd2, "multiAdd2");
+
+        Expression multiMultiplication1 = new MultiMultiplication(new IntegerLiteral(5), new DoubleLiteral(7));
+        printExpression(multiMultiplication1, "multiMultiplication1");
+
+        Expression multiMultiplication2 = new MultiMultiplication(
+                                                  new IntegerLiteral(5),
+                                                  new DoubleLiteral(7),
+                                                  new UnaryMinus(
+                                                          new Addition(
+                                                                  new DoubleLiteral(4),
+                                                                  new IntegerLiteral(3))));
+        printExpression(multiMultiplication2, "multiMultiplication2");
+
         Expression roundExp1 = new RoundedExpression(new DoubleLiteral(5.123456), 2);
         printExpression(roundExp1, "roundExp1");
 
@@ -112,13 +112,13 @@ public class Main {
 
         Expression roundExp3 = new RoundedExpression(new DoubleLiteral(5.1234567), 5);
         printExpression(roundExp3, "roundExp3");
-//
-//        Expression roundExp4 = new RoundedExpression(multiAdd2, 2);
-//        printExpression(roundExp4, "roundExp4");
-//
-//        Expression roundExp5 = new RoundedExpression(multiAdd2, 1);
-//        printExpression(roundExp5, "roundExp5");
-//
+
+        Expression roundExp4 = new RoundedExpression(multiAdd2, 2);
+        printExpression(roundExp4, "roundExp4");
+
+        Expression roundExp5 = new RoundedExpression(multiAdd2, 1);
+        printExpression(roundExp5, "roundExp5");
+
 //        Expression massiveExp = new Multiplication(
 //                                        divisionExp,
 //                                        new UnaryMinus(

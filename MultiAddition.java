@@ -1,32 +1,36 @@
 public class MultiAddition extends Expression {
+    private Expression[] expressions;
     private double value;
-    private String printedValue;
 
     public MultiAddition(Expression... values) {
-        int sum = 0;
-        for (Expression value : values) {
+        this.expressions = values;
+        double sum = 0;
+        for (Expression value : expressions) {
             sum += value.evaluate();
         }
         this.value = sum;
-        for (Expression value : values) {
-            String string_val = value.toString();
-            this.printedValue = String.join(")+(", string_val);
-        }
 
-        }
-        @Override
+    }
+
+    public Expression[] getExpressions() {
+        return expressions;
+    }
+
+    @Override
         public double evaluate () {
             return this.value;
         }
 
         @Override
         public String toString () {
-            return this.printedValue;
+            String result = "";
+            for (int i = 1; i < getExpressions().length; i++) {
+                result += " + " + getExpressions()[i].toString();
+            }
+            return "(" + getExpressions()[0] + result + ")";
         }
     }
-//    public MultiAddition() {
-//        this.value = 0;
-//        this.printedValue = "";
+
 
 
 

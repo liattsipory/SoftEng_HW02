@@ -1,18 +1,6 @@
-public class Multiplication extends Expression {
-    private double value;
-    private String printedValue;
+public class Multiplication extends MultiMultiplication {
 
-    public Multiplication (Expression val1, Expression val2) {
-        this.value = val1.evaluate() * val2.evaluate();
-        printedValue = "(" + val1 + ")"+"*"+"(" + val1 + ")";
-    }
-
-    public double evaluate() {
-        return this.value;
-    }
-
-    @Override
-    public String toString() {
-        return this.printedValue;
+    public Multiplication(Expression val1, Expression val2) {
+        super(val1, val2);
     }
 }
