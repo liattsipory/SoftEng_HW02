@@ -1,10 +1,9 @@
-public class Division extends Expression {
+public class Division extends Multiplication {
     private double value;
     private String printedValue;
 
     public Division (Expression val1, Expression val2) {
-        this.value = val1.evaluate() / val2.evaluate();
-        printedValue = "(" + val1 + ")"+"/"+"(" + val1 + ")";
+        super(val1, new DoubleLiteral(1/val2.evaluate()));
     }
 
     public double evaluate() {
