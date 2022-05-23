@@ -10,7 +10,7 @@ public class MultiAddition extends Expression {
         this.value = sum;
         for (Expression value : values) {
             String string_val = value.toString();
-            this.printedValue = String.join(")+(", string_val);
+            this.printedValue = String.join("+", string_val);
         }
 
         }

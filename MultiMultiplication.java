@@ -10,7 +10,7 @@ public class MultiMultiplication extends Expression{
         this.value = result;
         for (Expression value : values) {
             String string_val = value.toString();
-            this.printedValue = String.join(")*(", string_val);
+            this.printedValue = String.join("*", string_val);
         }
 
     }
