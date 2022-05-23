@@ -14,7 +14,6 @@ public class MultiMultiplication extends Expression{
             this.printedValue += values[i].toString() + " * ";
         }
         this.printedValue += values[len-1].toString() + ")";
-
     }
 
 

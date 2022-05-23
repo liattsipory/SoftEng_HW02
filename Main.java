@@ -119,35 +119,35 @@ public class Main {
         Expression roundExp5 = new RoundedExpression(multiAdd2, 1);
         printExpression(roundExp5, "roundExp5");
 
-//        Expression massiveExp = new Multiplication(
-//                                        divisionExp,
-//                                        new UnaryMinus(
-//                                                new Multiplication(
-//                                                        divisionExp,
-//                                                        new Division(
-//                                                                new Addition(
-//                                                                        new Subtraction(
-//                                                                                intExp1,
-//                                                                                intExp2),
-//                                                                        doubleExp1),
-//                                                                new UnaryMinus(
-//                                                                        new Division(
-//                                                                                new DoubleLiteral(2.17),
-//                                                                                new Subtraction(divisionExp, exp3)))))));
-//        printExpression(massiveExp, "massiveExp");
-//
-//        ExpressionParser polishParser = new PolishNotationParser();
-//        ExpressionParser reversePolishParser = new ReversePolishNotationParser();
-//
-//        Expression parsed1 = polishParser.parse("1.5");
-//        printExpression(parsed1, "parsed1", true);
-//
-//        Expression parsed2 = reversePolishParser.parse("1");
-//        printExpression(parsed2, "parsed2", true);
-//
-//        Expression parsed3 = polishParser.parse("1.0");
-//        printExpression(parsed3, "parsed3", true);
-//
+        Expression massiveExp = new Multiplication(
+                                        divisionExp,
+                                        new UnaryMinus(
+                                                new Multiplication(
+                                                        divisionExp,
+                                                        new Division(
+                                                                new Addition(
+                                                                        new Subtraction(
+                                                                                intExp1,
+                                                                                intExp2),
+                                                                        doubleExp1),
+                                                                new UnaryMinus(
+                                                                        new Division(
+                                                                                new DoubleLiteral(2.17),
+                                                                                new Subtraction(divisionExp, exp3)))))));
+        printExpression(massiveExp, "massiveExp");
+
+        ExpressionParser polishParser = new PolishNotationParser();
+        //ExpressionParser reversePolishParser = new ReversePolishNotationParser();
+
+        Expression parsed1 = polishParser.parse("1.5");
+        printExpression(parsed1, "parsed1", true);
+
+        //Expression parsed2 = reversePolishParser.parse("1");
+        //printExpression(parsed2, "parsed2", true);
+
+        Expression parsed3 = polishParser.parse("1.0");
+        printExpression(parsed3, "parsed3", true);
+
 //        Expression parsed4 = polishParser.parse("+ 1 2");
 //        printExpression(parsed4, "parsed4", true);
 //
