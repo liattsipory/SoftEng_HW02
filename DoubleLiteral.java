@@ -1,10 +1,8 @@
 public class DoubleLiteral extends Expression{
     private double value;
-    private String printedValue;
 
     public DoubleLiteral(double number) {
         this.value = number;
-        printedValue = "(" + number + ")";
     }
 
     public double getValue() {
@@ -17,6 +15,6 @@ public class DoubleLiteral extends Expression{
 
     @Override
     public String toString() {
-        return this.printedValue;
+        return "(" + this.value + ")";
     }
 }

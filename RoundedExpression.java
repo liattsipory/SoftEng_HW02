@@ -1,22 +1,15 @@
-public class RoundedExpression extends Expression {
-    private double value;
-    private String printedValue;
-    private int bound;
+public class RoundedExpression extends DoubleLiteral {
+    private double roundedValue;
 
     public RoundedExpression(Expression number, int bound) {
-        this.bound = bound;
+        super(number.evaluate());
         double exp = Math.pow(10, bound);
-        this.value = (Math.round(number.evaluate()*exp))/exp;
-        this.printedValue = number.toString();
+        this.roundedValue = (Math.round(number.evaluate()*exp))/exp;
     }
 
     @Override
     public double evaluate() {
-        return this.value;
+        return this.roundedValue;
     }
 
-    @Override
-    public String toString() {
-        return printedValue;
-    }
 }
