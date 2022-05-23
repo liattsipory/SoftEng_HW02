@@ -1,10 +1,9 @@
-public class Subtraction extends Expression {
+public class Subtraction extends Addition {
     private double value;
     private String printedValue;
 
     public Subtraction (Expression val1, Expression val2) {
-        this.value = val1.evaluate() - val2.evaluate();
-        printedValue = "(" + val1 + ")"+"-"+"(" + val1 + ")";
+        super(val1, new UnaryMinus(val2));
     }
 
     public double evaluate() {
