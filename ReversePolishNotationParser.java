@@ -1,12 +1,33 @@
-//public class ReversePolishNotationParser extends ExpressionParser {
-//
-//    @Override
-//    public Expression parse(String string) {
-//        String[] input = string.split("[ ]", 0);
-//        int len = input.length;
-//        for (int i = 0; i < len; i++) {
-//
-//        }
-//    }
-//
-//}
+public class ReversePolishNotationParser extends ExpressionParser {
+
+    @Override
+    public Expression parse(String string) {
+        Expression finalExpression;
+        String[] input = string.split(" ");
+        int len = input.length;
+        if (len == 1) finalExpression = singleStringToExp(input[0]);
+        else {
+            Expression[] helperArray = new Expression[len];
+            int helpPointer = -1;
+            for (int inputPointer = 0; inputPointer < len; inputPointer++) {
+                if (!isOperator(input[inputPointer])) {
+                    helpPointer += 1;
+                    helperArray[helpPointer] = singleStringToExp(input[inputPointer]);
+                }
+                else if (input[inputPointer].equals("-u")) {
+                    Expression[] toCalc = {helperArray[helpPointer]};
+                    helperArray[helpPointer] = calculator("-u", toCalc);
+                }
+                else {
+                    helpPointer -= 1;
+                    Expression[] toCalc = {helperArray[helpPointer], helperArray[helpPointer+1]};
+                    helperArray[helpPointer] = calculator(input[inputPointer], toCalc);
+                }
+
+            }
+            finalExpression = helperArray[helpPointer];
+        }
+        return finalExpression;
+    }
+
+}
