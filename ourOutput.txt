@@ -1,0 +1,53 @@
+--------------- Tests for part A ---------------
+c1 with o1: true
+o1 with c1: true
+c1 with ac1: false
+ac1 with c1: false
+c1 with c2: false
+c2 with c1: false
+c1 with o2: false
+o2 with c1: false
+ac1 with c2: true
+c2 with ac1: true
+ac1 with o2: true
+o2 with ac1: true
+c2 with o2: true
+o2 with c2: true
+c1 with null: false
+o1 with null: false
+ac1 with null: false
+c1: 10:30
+o1: 10:30
+ac1: 10:30:20
+c2: 10:30:20
+o2: 10:30:20
+new: 05:06:03
+--------------- Tests for part B ---------------
+intExp1: (5)
+intExp1 with toString: (5)
+intExp1 value: 5.0
+
+doubleExp1: (7.5)
+doubleExp1 with toString: (7.5)
+doubleExp1 value: 7.5
+
+exp1: null
+exp1 with toString: null
+exp1 value: 0.0
+
+exp2: null
+exp2 with toString: null
+exp2 value: 0.0
+
+roundExp1: (5.123456)
+roundExp1 with toString: (5.123456)
+roundExp1 value: 5.12
+
+roundExp2: (5.123456)
+roundExp2 with toString: (5.123456)
+roundExp2 value: 5.0
+
+roundExp3: (5.1234567)
+roundExp3 with toString: (5.1234567)
+roundExp3 value: 5.12346
+
