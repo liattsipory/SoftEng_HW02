@@ -24,18 +24,21 @@ public class PolishNotationParser extends ExpressionParser {
            to the right of the operator
          */
         else {
+            /* Using the helperArray as a "stack" that holds the full expression */
             Expression[] helperArray = new Expression[len];
             int helpPointer = len;
-            /* Transforming numbers into an Expression type and putting them in the stack*/
             for (int inputPointer = len-1; inputPointer >=0; inputPointer--) {
+                /* Transforming numbers into an Expression type and putting them in the "stack" */
                 if (!isOperator(input[inputPointer])) {
                     helpPointer -= 1;
                     helperArray[helpPointer] = singleStringToExp(input[inputPointer]);
                 }
+                /* Creating an UnaryMinus type object with the last expression*/
                 else if (input[inputPointer].equals("-u")) {
                     Expression[] toCalc = {helperArray[helpPointer]};
                     helperArray[helpPointer] = calculator("-u", toCalc);
                 }
+                /* Creating the relevant type object with the last two expressions*/
                 else {
                     helpPointer += 1;
                     Expression[] toCalc = {helperArray[helpPointer-1], helperArray[helpPointer]};
