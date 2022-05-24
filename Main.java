@@ -148,15 +148,15 @@ public class Main {
         Expression parsed3 = polishParser.parse("1.0");
         printExpression(parsed3, "parsed3", true);
 
-//        Expression parsed4 = polishParser.parse("+ 1 2");
-//        printExpression(parsed4, "parsed4", true);
-//
+        Expression parsed4 = polishParser.parse("+ 1 2");
+        printExpression(parsed4, "parsed4", true);
+
 //        Expression parsed5 = reversePolishParser.parse("1 2 +");
 //        printExpression(parsed5, "parsed5", true);
 //
-//        Expression parsed6 = polishParser.parse("* + 1.0 2 + 3.0 4");
-//        printExpression(parsed6, "parsed6", true);
-//
+        Expression parsed6 = polishParser.parse("* + 1.0 2 + 3.0 4");
+        printExpression(parsed6, "parsed6", true);
+
 //        Expression parsed7 = reversePolishParser.parse("1 2.0 + 3 4.0 + *");
 //        printExpression(parsed7, "parsed7", true);
 //
